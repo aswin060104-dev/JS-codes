@@ -18,7 +18,7 @@ git branch
 output: master 
 
 git branch -M main - changing master to main
-
+  
 Branches:
 git branch -a  -> shows all existing Branches
 git branch - create new branch
