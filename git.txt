@@ -30,3 +30,8 @@ q - Quit
 
 
 cat filename
+
+cat filename - to open file in terminal
+
+If git fatal error - access denied was occured, then delete credentials from credentials manager.
+Then you can sign in when you push.
