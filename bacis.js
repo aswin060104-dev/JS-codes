@@ -1,0 +1,139 @@
+// console.log(10 + true); //11
+// console.log(10 + null); //10 + 0
+//  true - 1, false - 0, undefined - NaN, null - 0
+/*
+Boolean : 
+Excpet null, undefined, 0, {}, '' - These are false
+When Boolean()
+*/
+// console.log(Boolean({}));
+// console 2009 - Douglas crockford - oops and JSON
+//cliend side scripting, interpreted programming language - v8 engine
+// server side - node js
+/**
+ * dynamically typed, event trigger programming, asynchronous, single page application,
+ * object based scripting
+ * Use: angular, react, vueJs
+ * react native supports - Both mobile and desktop
+ * Electron - desktop
+ * 
+ * script tag must be provided last of the body
+ * Because it will make more time for loading
+ * 
+ * same script tag can't contains both external and internal script
+ * 
+ * variable declaration:
+ * $ _ a A
+ * 
+ * default value is undefined
+ * var = 5;
+ * var = 10;
+ * let variable can't be redeclare
+ * const can't redecalre and reassign
+ * 
+ * printing statements:
+ * alert()
+ * console.log()
+ * document.write() - directly writes value in DOM
+ * documentWriteln()
+ * confirm() - it is a alert, have cancel button as extra
+ * prompt() - acts as alert with a box to enter value
+ * console.error()
+ * console.warn()
+ * console.clear() - clears all the previous logs
+ * 
+ * Data Types:
+ * primitive - number, string, boolean, undefined
+ * non-primitive - object, array, function ,date
+ * 
+ * PRIMITVE:
+ * var a = 120 
+ * 
+ *null - empty value
+
+ Non PRIMITIVE: reference type
+ Array - stores multiple value
+
+ Object - have property and Behaviour - real world entity
+ key value pair
+
+ Operators
+ post increment 
+ subsitute -> operation -> increment 
+ pre increment 
+ subsitute and increment then performs operation
+
+ strict not equal 
+ same value then compares data type if same then false;
+ dif data type then true
+
+ console.log(50 !== '50'); // true;
+ console.log(50 != '50'); // false;
+
+ type conversion
+
+ implict
+
+ string + anything is string
+ 
+ control statement 
+
+ functions - calling the needed action to perform
+
+ default parameters
+ return type, non return type
+ scope
+
+ browser - window, alert(), prompt()
+ server (node js) - global 
+
+ when we call a property in a object which is not present in the object, then it will create that property and assign undefined. Will not through reference error
+
+ Ex. let school = {
+    name : "KCET"
+ }
+
+ school.address will be undefined
+
+
+ Scope :
+ When a variable not present in the current scope, then it will search in the outer scope
+
+ function type:
+
+ Named, anonymous, arrow function
+
+ arrow function doesn't need brackets and return if it has only one statement, need no parenthesis if it has only one params.
+
+ Higher order Function
+ If a function is passed as argument, then it calls higher order function.
+ The passed function is called callback function.
+
+ function fun1(){
+ }
+
+ function fun2(fun1) -- fun2 - higher order, fun1 -call back
+ note: reference is enough for passing a function as argument
+
+hoisting:
+
+temporary dead zone - const, let
+
+named functions are hoisted
+
+curring
+
+passing arguments as chaining like add(10)(20)
+
+IIFE, closure
+
+immediately invoked function expression - memory will be cleared after execution
+
+
+ */
+
+// let a = ;
+console.log("Aswin" + {});
+console.log("Aswin" + a);
+
+

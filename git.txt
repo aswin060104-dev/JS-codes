@@ -1,0 +1,32 @@
+git clone "" - to make a copy of the repo to local
+git status -
+git add filename - to stage
+git commit -m "" - to commit to git copy folder
+git push origin main - to push to github
+git pull - to get the github changes to local
+
+
+cd - change directory
+
+Creating new repo from local
+git init - initializing empty git repo
+git add . - stageing all files which are modified
+git commit -m ""
+git remote add origin ""
+
+git branch
+output: master 
+
+git branch -M main - changing master to main
+
+Branches:
+git branch -a  -> shows all existing Branches
+git branch - create new branch
+git checkout brach_to_direct 
+git diff branch_name - currenct branch and branch_name difference
+git merge branch_name
+
+q - Quit
+
+
+cat filename

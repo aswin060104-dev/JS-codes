@@ -1,0 +1,3 @@
+variable, functions, class are type?
+hoisting of
+var can redeclare?
