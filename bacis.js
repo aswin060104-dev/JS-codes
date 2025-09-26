@@ -173,5 +173,81 @@ function add(a,b,...rest){
  * pop - removes last element
  * push  - inserts at last - more than one elements can be added
  * shift - removes first element
+ * unshift - adds at first
+ * concat - used to get shallow copy before shallow copy
+ * let arr1 = [].concat(1,2,3)
+ * let arr2 = arr1.concat();
  * 
+ * Slice - empty params - shallow copy
+ * (start, end - 1) or (start) 
+ * 
+ * flat() - returns new array, removes the first level arrays
+ * flat(n) - number of inner levels to remove
+ * flat(infinity) - to remove all levele nested arrays
+ * 
+ * fill(n) - replaces all the values in the arrays
+ *           affects the existing array
+ * let a = [1,2,3]
+ * a.fill(1) -> [1,1,1]
+ * fill(number, start, end - 1)
+ * 
+ * sort: affects original array
+ * arr.sort() - ascending - sorting based on ASCII - A - 65, a - 97, 0 - 48, 1 - 49, ' ' - 32
+ * 
+ * reverse - original
+ * 
+ * includes - return bool
+ * arr.includes(n)
+ * 
+ * join - creates new array
+*/
+
+// let a = [1,2,3,4]
+// console.log(a.join(' ')); // 1 2 3 4
+// console.log(a.toString()); //1,2,3,4
+
+
+/**
+ * IndexOf - search left to right
+ * indexOf(n, startIndex) startIndex can be negative
+ * not found -> -1
+ * 
+ * lastIndexOf(n, startIndex) - right to left
+ * 
+ * HighOrderMethod: JSON - JavaScript Object Notation
+ * forEach, Map
+ * manipulates the array before show in the UI
+ */
+let alphabets = ['a','b','c','d']
+// alphabets.forEach(printElement); // doesn't return
+
+// function printElement(currentElement, index, totalElements){
+//    console.log(currentElement);
+// }
+
+let newAlpha = alphabets.map(a =>
+   { return a + '1'})
+console.log(newAlpha);
+
+// chaining method 
+// map().sort().fill() 
+//A > a
+
+// filter and find
+/**
+ * filter - returns array
+ * find - single element, left to right
+ */
+alphabets.filter(val => console.log(val))
+/**
+ * numeric sort, some, every 
+ * sort(() => {}) - compare callback function
+ * a - b => positive -> swapping ---> ascending
+ * 
+ * strings are not sorted when compare function is used.
+ * 
+ * some - logical OR || 
+ * every - logical AND 
+ * 
+ * reduce -> converts into single value
  */
