@@ -27,6 +27,3 @@ git diff branch_name - currenct branch and branch_name difference
 git merge branch_name
 
 q - Quit
-
-
-cat filename

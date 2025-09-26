@@ -129,11 +129,49 @@ IIFE, closure
 
 immediately invoked function expression - memory will be cleared after execution
 
-
+Non-primitives are stored in heap memory
+Spread operator :
  */
+// let a = [1,2,3]
+// let b = ["hi", "bro"]
+// let c = [...a, ...b] //shallow copy only for the first set valuess
+// console.log(c);
 
-// let a = ;
-console.log("Aswin" + {});
-console.log("Aswin" + a);
+// let student = {
+//    name : "Aswin",
+//    additional : {
+//       city : "madurai"
+//    }
+// }
 
+// let newStudent = {...student, name : "Alwin"}
+// newStudent.name = "Arul"
+// newStudent.additional.city = "New" // same reference
+// console.log(student);
+// console.log(newStudent);
 
+// rest parameter:
+// This will be last parameter
+function add(a,b,...rest){
+   console.log(a,b,rest);
+}
+// add(1,2,3,4,5)
+
+/**
+ * Destructer
+ * let a = [1,2,3,4]
+ * let [a,b,c,d] = a
+ * let [x,y,...remaining] = a
+ */
+//   let a = [1,2,3,4]
+//   let [x,y,...remaining] = a // rest parameter
+
+//   console.log(x,y,remaining);
+  
+//array functions:
+/**
+ * pop - removes last element
+ * push  - inserts at last - more than one elements can be added
+ * shift - removes first element
+ * 
+ */
