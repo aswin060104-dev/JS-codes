@@ -27,3 +27,11 @@ git diff branch_name - currenct branch and branch_name difference
 git merge branch_name
 
 q - Quit
+
+
+cat filename
+
+cat filename - to open file in terminal
+
+If git fatal error - access denied was occured, then delete credentials from credentials manager.
+Then you can sign in when you push.
