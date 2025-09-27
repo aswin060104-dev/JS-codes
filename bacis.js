@@ -218,16 +218,16 @@ function add(a,b,...rest){
  * forEach, Map
  * manipulates the array before show in the UI
  */
-let alphabets = ['a','b','c','d']
+// let alphabets = ['a','b','c','d']
 // alphabets.forEach(printElement); // doesn't return
 
 // function printElement(currentElement, index, totalElements){
 //    console.log(currentElement);
 // }
 
-let newAlpha = alphabets.map(a =>
-   { return a + '1'})
-console.log(newAlpha);
+// let newAlpha = alphabets.map(a =>
+//    { return a + '1'})
+// console.log(newAlpha);
 
 // chaining method 
 // map().sort().fill() 
@@ -238,7 +238,7 @@ console.log(newAlpha);
  * filter - returns array
  * find - single element, left to right
  */
-alphabets.filter(val => console.log(val))
+// alphabets.filter(val => console.log(val))
 /**
  * numeric sort, some, every 
  * sort(() => {}) - compare callback function
@@ -292,4 +292,85 @@ alphabets.filter(val => console.log(val))
  floor() - converts to lower bound
  round() - school math
  trunc() - removes decimals 
+
+ date object
+
+ getFullyear() - 2024
+ getMonth() - index 0 - 11
+ getDate() - currentDate 
+ getMinutes(), getSecond()
+setFullYear(year, month, date)
+setMonth(month, date)
  */
+// let date = new Date()
+// console.log(date.toLocaleDateString()); //27/9/2025
+// console.log(date.toLocaleTimeString()); //2:35:43 pm
+// console.log(date.toISOString()); // 2025-09-27T09:05:43.601Z
+// console.log(date.toDateString()); //Sat Sep 27 2025
+// console.log(date.toLocaleString()); //27/9/2025, 2:35:43 pm
+
+/**
+ * Prototype (inheritance)  - Blue Print, contains the inbuilt method*
+ * Object.create()
+ */
+
+// let student = {
+//    name : "aswin",
+//    age : 20
+// }
+
+// let man = Object.create(student) // creating child 
+// man.height = 170
+// let man2 = Object.create(man) // creating inner level child
+// console.log(man.__proto__);
+// console.log(man2.__proto__);
+// console.log(man2.__proto__.__proto__);
+// console.log(Object.getPrototypeOf(man2)); // get above objects properties
+// console.log(Object.getPrototypeOf(Object.getPrototypeOf(man2)));
+
+
+/**
+ * Assign Method:
+ * Object.assgin(destination, source ) altetnative to spread
+ * Object.entries(objectName) ---> [[name : "aswin"],["age" : 20]]
+ * fromEntries() --> back to object
+ * keys() --> array with keys
+ * values() --> array of Values
+ * freeze() --> can't create new property or modify the values. Doesn't throw error
+ * isFrozen() --> to check whether it is freeze or not
+ * 
+ * 
+ * This context
+ * normal function'sthis will point the current objects property
+ * In Arrow, function, it points to global Object
+ * Undeclared variables, var are added as a property in global object
+ * 
+ * call, apply and bind
+ * 
+ * call - uses the properties of other object over the current. Properties can be used even though their is no relationship. property values are overrided.
+ * apply - second param must be array
+ * bind - The values will be binded in that object's function. It can be used later by calling
+ * 
+ * Whereas prototypes has relationship by using the create() method
+ */
+// let person = {
+//    name : "raja",
+//    role : "software dev",
+//    intro : function(){
+//       console.log(this.name + " "+ this.role);
+//       return "This is " + this.name;
+//    }
+// }
+
+// let person1 = {
+//     name : "aswin",
+//    role : "developer"
+// }
+// person.intro()
+// person.intro.call(person1)
+// person.intro.apply(person1, [10, 20] )  // second parameter must be object
+
+// let a = person.intro.bind(person1)
+// console.log(a());
+
+// objectName, normalParams
