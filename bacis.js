@@ -374,3 +374,45 @@ setMonth(month, date)
 // console.log(a());
 
 // objectName, normalParams
+/**
+ * Memory management area
+ * Stack - primitive values
+ * Heap - non-primitive --- object, array
+ * 
+ * call by value 
+ * let x = 10;
+ * let y = x;
+ * x = 20;
+ * log -- x, y --- 20, 10
+ * 
+ * 
+ * call by reference:
+ * Stack
+ * address | variables | values
+ *  0x100  | obj1      | 0x200
+ *  0x104  | arr1      | 0x204
+ *  0x108  | obj2      | 0x200
+ * 
+ * Heap Memory
+ * 
+ * Address | Object
+ * 0x200   | {name : "raja"}
+ * 0x204   | [1,2,3]
+ * 
+ * values will be changed dynamically - size will be varied
+ * 
+ * Deep copy - values will not be affected by any other assign
+ *             spread method, JSON.parse and JSON.stringify
+ * shallow copy - values will be changed in both obj when it was changed in one.
+ *                first level only gets new reference
+ *  */
+
+// let person1 = {
+//    name1 : "aswin",
+//    additional : {
+//       location : "madurai"
+//    }
+// }
+
+// let person2 = {...person1, additional : {...person1.additional}} //deep copy
+// let a = [1,2,3, [4,5,6]]
