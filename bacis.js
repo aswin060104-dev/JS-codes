@@ -250,4 +250,12 @@ alphabets.filter(val => console.log(val))
  * every - logical AND 
  * 
  * reduce -> converts into single value
+ * 
+ *reduce(callBack, initialValue - accumulator)
+ callBack = previousValue, currentElement, index, array
+ 
+ Note : previousValue = initialValue
+ previousValue = return Value from the previous Iteration
+ 
+ 
  */
