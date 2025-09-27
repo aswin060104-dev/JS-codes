@@ -257,5 +257,29 @@ alphabets.filter(val => console.log(val))
  Note : previousValue = initialValue
  previousValue = return Value from the previous Iteration
  
+ String methods:
+ charAt() - cannot work with negative index
+ charCodeAt() - returns the ASCII Value
+ concat - str1.concat(" ", str2)
+ includes(charName, startIndex)
+ indexOf(char, startIndex)
+ lastIndexOf()
+ repeat(count) - str.repeat(2) --> str = 'aa'
+ str.replace("js", "Java Script") - replaces the first occurence
+ str.slice(startIndex, endIndex? - 2) - negative can work
+ str.substring(start, end?) - will swap and didn't work in negative
+
+ split("") - converts to char array
+ spilt("", number of index needed in new array)
+
+ startsWith("", startIndex) - default Zero
+ endsWith("", postion) - default Last Value
+ 
+ toLowerCase, toLowerCase()
+
+ trim() - removes space in start and end 
+ trimStart() - removes first
+ trimEnd() - removes last
+
  
  */
