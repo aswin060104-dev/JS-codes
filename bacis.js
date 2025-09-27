@@ -281,5 +281,15 @@ alphabets.filter(val => console.log(val))
  trimStart() - removes first
  trimEnd() - removes last
 
- 
+ abs() - retuns positive value
+ sign() - retuns -1, 0, 1
+ sqrt()
+ cbrt()
+ pow()
+ random() - returns from 0 to 1
+ toFixed(decimalPlaces)
+ ceil() - converts to upper bound
+ floor() - converts to lower bound
+ round() - school math
+ trunc() - removes decimals 
  */
