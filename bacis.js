@@ -518,4 +518,35 @@ setMonth(month, date)
 // }
 
 // learnAsync();
-// console.log("This will be executed first because of async function call")
+// console.log("This will be executed first because of async function call")\
+
+/**
+ * Fetch API
+ * API - Application Data Interface (webservice) - used to share data
+ * HTTP - HyperText Transfer Protocal sends a request the server 
+ * (rest - representational State Transfer), Soap - simple access protocol
+ * Json - Javascript object notation, light weight, Easy to convert to Json 
+ * XML was used in old school
+ */
+try {
+   fetch('https://fakestoreapi.com/produs', {
+      method : 'GET'
+   }).then(
+      (msg) => {
+         if(!msg.ok) // If invalid URL, then ok will be false
+            throw new Error("Invalid URL")
+         return msg.json();
+      }
+   ).then(
+      (res) => {
+         console.log(res);
+      }
+   ).catch(
+      (err) => {
+         console.log(err)
+      }
+   )
+}
+catch(err){
+   console.log("Error Here :  " + err.message)
+}
