@@ -152,8 +152,8 @@ Spread operator :
 
 // rest parameter:
 // This will be last parameter
-function add(a,b,...rest){
-   console.log(a,b,rest);
+function add(a, b, ...rest) {
+   console.log(a, b, rest);
 }
 // add(1,2,3,4,5)
 
@@ -167,7 +167,7 @@ function add(a,b,...rest){
 //   let [x,y,...remaining] = a // rest parameter
 
 //   console.log(x,y,remaining);
-  
+
 //array functions:
 /**
  * pop - removes last element
@@ -416,3 +416,106 @@ setMonth(month, date)
 
 // let person2 = {...person1, additional : {...person1.additional}} //deep copy
 // let a = [1,2,3, [4,5,6]]
+
+/** single threaded language
+ * synchronous - executes line by line
+ * webApi (browser) - settimeout ()
+ * 
+ * call stack(LIFO) -
+ * webApi - 
+ * CallBack queue FIFO - 
+ * eventLoop checks stack, if nothing is in process, then checks in callBack queue
+ * 
+ * function execution stack
+ * global memory context
+ * 
+ * microTask - first priority --> promises
+ * macroTask - second priority --> settimeout, setInterval
+ * 
+ * Promise (object)- resolve(then), reject(catch), pending
+ * promise(executor) -> (callback, callback)
+ * finally - this will execute after the execution of resolve and reject
+ */
+
+// let promise = new Promise((resolve, reject) => {
+//    let bool = true;
+//    if(bool){
+//       resolve("Success")
+//    }
+//    else{
+//       reject("Error")
+//    }
+// })
+// promise.then((msg) => {
+//    console.log(msg);
+//    return "First sucess"
+// }).then((msg) => {
+//    console.log(msg); // "First sucess"
+// }).catch((msg) => {
+//    console.log(msg);
+// })
+
+// function fetchData(success, failure) {
+//    let dataFetch = true
+//    if (dataFetch) {
+//       success("Date fetches Successfully")
+//    }
+//    else {
+//       failure("Some error occured")
+//    }
+// }
+// This is a callback hell
+// fetchData(
+//    (msg) => {
+//       console.log(msg)
+//       fetchData(
+//          (msg) => {
+//             console.log("Secong time calling : "+msg)
+//          },
+//          (error) => {
+//             console.log(error);
+//          }
+//       )
+//    },
+//    (error) => {
+//       console.log(error);
+//    }
+// )
+
+/**
+ * async await - have try and catch - Exception handling
+ * promise waits in callback queue so doesn't block the flow
+ * await works as synchronous, only receives resolve
+ * Needs a catch block to recevie the error
+ * 
+ * In a MODULE or FILE (without async keyword word), await will act as synchronous i.e. it will wait to receive data
+ * In a function, the codes inside the function will act as synchronous. When the async function is called, it will be added to the callback queue and waits
+ */
+
+// let newPromise = new Promise((resolve, reject) => {
+//    let execution = true;
+//    if(execution){
+//       resolve("Execution Sucess")
+//    }
+//    else{
+//       reject("Execution falies")
+//    }
+// })
+
+// // let msg = await newPromise; // waits to receive the msg as resolve, if reject then catch will be
+// newPromise.then((msg) => console.log(msg)) // This will be executed after all the executions
+// // console.log(msg);
+// console.log("Last")
+
+// async function learnAsync() {
+//    try{
+//       let data = await newPromise;
+//       console.log(data);
+//    }
+//    catch(err){
+//       console.log(err)
+//    }
+// }
+
+// learnAsync();
+// console.log("This will be executed first because of async function call")
