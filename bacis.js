@@ -528,25 +528,51 @@ setMonth(month, date)
  * Json - Javascript object notation, light weight, Easy to convert to Json 
  * XML was used in old school
  */
-try {
-   fetch('https://fakestoreapi.com/produs', {
-      method : 'GET'
-   }).then(
-      (msg) => {
-         if(!msg.ok) // If invalid URL, then ok will be false
-            throw new Error("Invalid URL")
-         return msg.json();
-      }
-   ).then(
-      (res) => {
-         console.log(res);
-      }
-   ).catch(
-      (err) => {
-         console.log(err)
-      }
-   )
-}
-catch(err){
-   console.log("Error Here :  " + err.message)
-}
+// try {
+//    fetch('https://fakestoreapi.com/produs', {
+//       method : 'GET'
+//    }).then(
+//       (msg) => {
+//          if(!msg.ok) // If invalid URL, then ok will be false
+//             throw new Error("Invalid URL")
+//          return msg.json();
+//       }
+//    ).then(
+//       (res) => {
+//          console.log(res);
+//       }
+//    ).catch(
+//       (err) => {
+//          console.log(err)
+//       }
+//    )
+// }
+// catch(err){
+//    console.log("Error Here :  " + err.message)
+// }
+
+/**
+ * Modules
+ * export keyword can be used before variable, function and class
+ * If imports and exports are used, then file extension must be .mjs or in package.json type : module
+ * 
+ * export default - only one default export is allowed
+ * this export can be used without {} while importing
+ * 
+ * named export - multiple named export is allowed
+ * this export must be used with {} while importing
+ * import * as alias from 'path' - imports all the exports in a file
+ * 
+ * while importing, the path must be relative or absolute path
+ * 
+ * npm - node package manager
+ * third party packages
+ * 
+ * venila js - pure js (without any third party packages)
+ * npm init (creates package.json)
+ * if type: 'module', then file extension needs to be .js
+ * ts is a superset of js
+ * 
+ * In script tag, module must be specified
+ * <script type="module" src="path"></script>
+ */
